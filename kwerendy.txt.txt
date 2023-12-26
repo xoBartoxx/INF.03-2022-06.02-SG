@@ -1,0 +1,5 @@
+1. SELECT marka, rocznik FROM samochody WHERE kolor = 'niebieski';
+2. SELECT COUNT(id) FROM samochody WHERE stan = "bardzo dobry" AND (marka = "Opel" OR marka = "Toyota");
+3. UPDATE samochody SET stan = "dobry" WHERE rocznik < 2004;
+4. CREATE USER 'jan'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'jan'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+5. GRANT SELECT, INSERT, UPDATE ON `samochody`.`samochody` TO 'jan'@'localhost';

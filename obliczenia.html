@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+	<head>
+		
+		<meta charset="UTF-8">
+		<title>Stacja paliw</title>
+		<link rel="stylesheet" type="text/css" href="styl2.css">
+		
+	</head>
+	
+	
+	<body>
+		
+		<header>
+			<h1>Całodobowa stacja paliw</h1>
+		</header>
+		
+		
+		<main>
+			<a href="stacja.html"><img src="home.png"></a>
+			<a href="obliczenia.html"><img src="znak.png"></a>
+			<a href="kwerendy.txt">Pobierz dokumenty</a>
+		</main>
+		
+		
+		<aside>
+			<h2>Orientacyjny koszt paliwa</h2>
+			Rodzaj paliwa:(1-benzyna, 2-olej napędowy):<br><input type="number" id="rodzaj"><br>
+			Ile litrów?<br><input type="number" id="ilosc">
+			<button onclick="skrypt()">Oblicz</button>
+			<p id="wynik"></p>
+			<script>
+				function skrypt(){
+					
+					var rodzaj = document.getElementById("rodzaj").value;
+					var ilosc = document.getElementById("ilosc").value;
+					var wynik = document.getElementById("wynik");
+					
+					var benzyna = 4;
+					var olej = 3.5;
+					var inny = 0;
+					
+					if(rodzaj==1){
+						wynik.innerHTML = "koszt paliwa: " + benzyna*ilosc;
+					}
+					else if(rodzaj==2){
+						wynik.innerHTML = "koszt paliwa: " + olej*ilosc;
+					}
+					else{
+						wynik.innerHTML = "koszt paliwa: " + inny*ilosc;
+					}
+				}
+			</script>
+		</aside>
+		
+		
+		<article>
+			<img src="samochod.png" alt="samochód">
+		</article>
+		
+		
+		<footer>
+			<p>Stronę opracował: xoBartoxx<p>
+		</footer>
+	
+	
+	</body>
+
+
+
+</html>
